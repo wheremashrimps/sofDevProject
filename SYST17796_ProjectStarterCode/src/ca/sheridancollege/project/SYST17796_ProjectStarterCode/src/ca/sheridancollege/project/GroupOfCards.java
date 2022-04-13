@@ -14,15 +14,14 @@ import java.util.Collections;
  *
  * @author dancye
  * @author Paul Bonenfant Jan 2020
- * @modified by Team Shrimps
  */
 public class GroupOfCards {
 
     //The group of cards, stored in an ArrayList
-    private ArrayList<FishCard> cards;
-    private int size = 52;//the size of the grouping
+    protected ArrayList<Card> cards;
+    private int size;//the size of the grouping
 
-    public GroupOfCards() {
+    public GroupOfCards(int size) {
         this.size = size;
     }
 
@@ -31,7 +30,7 @@ public class GroupOfCards {
      *
      * @return the group of cards.
      */
-    public ArrayList<FishCard> getCards() {
+    public ArrayList<Card> getCards() {
         return cards;
     }
 
