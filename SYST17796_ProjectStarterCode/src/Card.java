@@ -6,46 +6,51 @@
 package ca.sheridancollege.project;
 
 /**
- * A class to be used as the base Card class for the project. Must be general enough to be instantiated for any Card
- * game. Students wishing to add to the code should remember to add themselves as a modifier.
+ * A class to be used as the base Card class for the project. Must be general
+ * enough to be instantiated for any Card
+ * game. Students wishing to add to the code should remember to add themselves
+ * as a modifier.
  *
  * @author dancye
  * @modified by Team Shrimps
  */
 public abstract class Card {
-    //default modifier for child classes
+    // default modifier for child classes
 
     /**
      * Students should implement this method for their specific children classes
      *
-     * @return a String representation of a card. Could be an UNO card, a regular playing card etc.
+     * @return a String representation of a card. Could be an UNO card, a regular
+     *         playing card etc.
      */
 
-     public enum Suit{
+    public enum Suit {
         HEARTS,
         SPADES,
         DIAMONDS,
         CLUBS
-     }
-        public enum Rank{
-            ACE,
-            TWO,
-            THREE,
-            FOUR,
-            FIVE,
-            SIX,
-            SEVEN,
-            EIGHT,
-            NINE,
-            TEN,
-            JACK,
-            QUEEN,
-            KING
-        }
+    }
+
+    public enum Rank {
+        ACE,
+        TWO,
+        THREE,
+        FOUR,
+        FIVE,
+        SIX,
+        SEVEN,
+        EIGHT,
+        NINE,
+        TEN,
+        JACK,
+        QUEEN,
+        KING
+    }
+
     private final Suit suit;
     private final Rank rank;
 
-    public Card (Suit suit, Rank rank){
+    public Card(Suit suit, Rank rank) {
         this.suit = suit;
         this.rank = rank;
     }
@@ -54,10 +59,13 @@ public abstract class Card {
         return suit;
     }
 
-    public Rank getRank(){
+    public Rank getRank() {
         return rank;
     }
+
     @Override
-    public abstract String toString();
+    public String toString() {
+        return this.getRank() + " of " + this.getSuit();
+    };
 
 }
