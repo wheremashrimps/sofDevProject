@@ -5,7 +5,7 @@ public class Hand {
     private ArrayList<Card> cards;
 
     public Hand() {
-        this.cards = new ArrayList<Card>();
+        this.cards = new ArrayList<Card>(5);
     }
 
     public void addCard(Card card) {
