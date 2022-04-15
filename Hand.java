@@ -28,11 +28,9 @@ public class Hand {
         this.cards = cards;
     }
 
-    public int getCardsInHand() {
-        int value = 0;
+    public void getCardsInHand() {
         for (Card card : this.cards) {
-            value += card.getCardsInHand();
+            System.out.println(card.toString());
         }
-        return value;
     }
 }
