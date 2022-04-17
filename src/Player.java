@@ -76,12 +76,15 @@ public class Player {
             this.pairs++;
         }
     }
+
     public void setPairs(int pairs){
         this.pairs = pairs;
     }
+
     public int getPairs(){
         return this.pairs;
     }
+    
     public int checkPairs(){
         int pairs = 0;
         for (int i = 0; i < this.hand.cards.size(); i++) {
@@ -98,6 +101,7 @@ public class Player {
         }
         return pairs;
     }
+
     public boolean askCard(Player nextPlayer, Card card){
         if(nextPlayer.hand.cards.contains(card)){
             return true;
