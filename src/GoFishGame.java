@@ -67,13 +67,14 @@ public class GoFishGame extends Game {
     }
 
     public void populateGame() {
-        for (int i = 0; i < 4; i++) {
-            System.out.println("Please enter the name of Player " + (i + 1));
-            try {
-                
-            } catch (Exception e) {
-                //TODO: handle exception
+        try (Scanner input = new Scanner(System.in)) {
+            for (int i = 0; i < 4; i++) {
+                System.out.println("Please enter the name of Player " + (i + 1));
+                String name = input.nextLine();
+                this.players.add(new Player(name));
             }
+        } catch (Exception e) {
+            e.printStackTrace();
         }
     }
 
