@@ -97,7 +97,7 @@ public class GoFishGame extends Game {
     public void play() {
         System.out.println("Welcome to Go-Fish!");
         this.populateGame();
-        System.out.println(this.getPlayers().size());
+        System.out.println(this.players.size());
 
     }
 
