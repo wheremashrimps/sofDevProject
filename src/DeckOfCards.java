@@ -12,6 +12,8 @@ public class DeckOfCards extends GroupOfCards {
         super(size);
         this.size = 52;
         this.cards = new ArrayList<Card>();
+        this.generateDeck();
+        this.shuffle();
     }
 
     public void generateDeck() {

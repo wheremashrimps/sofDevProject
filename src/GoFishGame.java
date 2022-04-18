@@ -72,6 +72,7 @@ public class GoFishGame extends Game {
                 System.out.println("Please enter the name of Player " + (i + 1));
                 String name = input.nextLine();
                 this.players.add(new Player(name));
+                this.players.get(i).drawHand(deck);
             }
         } catch (Exception e) {
             e.printStackTrace();

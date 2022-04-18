@@ -44,14 +44,14 @@ public class Player {
         return name;
     }
 
-    public void drawHand(GroupOfCards deck) {
+    public void drawHand(DeckOfCards deck) {
         for (int i = 0; i < 5; i++) {
             this.hand.cards.add(deck.cards.remove(0));
             deck.setSize(deck.cards.size());
         
         }
     }
-    public void drawCard(GroupOfCards deck){
+    public void drawCard(DeckOfCards deck){
         if (deck.cards.size() > 0) {
             this.hand.cards.add(deck.cards.remove(0));
             deck.setSize(deck.cards.size());
